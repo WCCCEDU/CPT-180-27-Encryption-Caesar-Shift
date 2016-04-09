@@ -1,0 +1,27 @@
+[settings]
+    arch=x86_64
+    build_type=Release
+    compiler=apple-clang
+    compiler.libcxx=libc++
+    compiler.version=6.0
+    os=Macos
+
+[requires]
+    gtest/1.Y.Z
+
+[options]
+
+
+[full_settings]
+    arch=x86_64
+    build_type=Release
+    compiler=apple-clang
+    compiler.libcxx=libc++
+    compiler.version=6.0
+    os=Macos
+
+[full_requires]
+    gtest/1.7.0@lasote/stable:9637011dfdaa8f65ad1ba1d5eb9335b86625b95d
+
+[full_options]
+    gtest:shared=True
