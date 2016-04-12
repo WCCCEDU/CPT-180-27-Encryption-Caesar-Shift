@@ -3,12 +3,9 @@
 #include <stdlib.h>
 #include "EncryptionHeader.h"
 
-std::string PLAIN_TEXT_FILE = "C:\\Users\\Samantha\\Documents\\Schoolwork\\Spring2016\\C++\\"
-                                "CPT-180-27-Encryption-Caesar-Shift\\plain.txt";
-std::string CYPHER_TEXT_FILE = "C:\\Users\\Samantha\\Documents\\Schoolwork\\Spring2016\\C++\\"
-                                "CPT-180-27-Encryption-Caesar-Shift\\encrypted.txt";
-std::string DECYPHER_TEXT_FILE = "C:\\Users\\Samantha\\Documents\\Schoolwork\\Spring2016\\C++"
-                                "\\CPT-180-27-Encryption-Caesar-Shift\\decrypted.txt";
+std::string PLAIN_TEXT_FILE = "./plain.txt";
+std::string CYPHER_TEXT_FILE = "./encrypted.txt";
+std::string DECYPHER_TEXT_FILE = "./decrypted.txt";
 int SHIFT = 1;
 
 int main(int argc, char* argv[]) {
@@ -35,7 +32,7 @@ int main(int argc, char* argv[]) {
     std::ifstream plain_text;
     std::string line = "";
     plain_text.open(file);
-    plain_text.seekg(0L, plain_text.beg);
+    // plain_text.seekg(0L, plain_text.beg);
     getline(plain_text, line);
     plain_text.close();
 
