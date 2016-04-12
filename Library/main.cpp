@@ -41,21 +41,23 @@ namespace cpt_180_encryption {
 
     char* encrypt(std::string plain_text, int shift){
       int plain_length = plain_text.size();
-      char* cypher = new char[plain_length];
+      char* cypher = new char[plain_length + 1];
 
       for(int i = 0; i < plain_length; i++){
         cypher[i] = shift_letter(plain_text[i], shift);
       }
+      cypher[plain_length] = '\0';
       return cypher;
     }
 
     char* decrypt(std::string cypher_text, int shift){
       int cypher_length = cypher_text.size();
-      char* plain = new char[cypher_length];
+      char* plain = new char[cypher_length + 1];
 
       for(int i = 0; i < cypher_length; i++){
         plain[i] = unshift_letter(cypher_text[i], shift);
       }
+      plain[cypher_length] = '\0';
       return plain;
     }
 }
